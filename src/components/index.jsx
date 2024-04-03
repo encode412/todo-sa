@@ -24,14 +24,14 @@ const Todo = () => {
   //sort functionality to show completed todos
   const filterTodoByCompletion = (completed) => {
     const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
-    const conpletedTodos = savedTodos.filter((todo) => todo.completed === true);
+    const conpletedTodos = savedTodos?.filter((todo) => todo.completed === true);
     setTodos(conpletedTodos);
   };
 
   //sort functionality to show all active or uncompleted todos
   const filterTodoByActive = (completed) => {
     const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
-    const activeTodos = savedTodos.filter((todo) => todo.completed !== true);
+    const activeTodos = savedTodos?.filter((todo) => todo.completed !== true);
     setTodos(activeTodos);
   };
 
@@ -61,15 +61,7 @@ const Todo = () => {
     localStorage.setItem("todos", JSON.stringify(newTodos));
   };
 
-  // const editTodo = (id) => {
-  //   setTodos(
-  //     todos.map((todo) =>
-  //       todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
-  //     )
-  //   );
-  // };
-
-  // functionality to edit a tod
+  // functionality to edit a todo
   const editTask = (task, id) => {
     const newTodos = todos?.map((todo) =>
       todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
