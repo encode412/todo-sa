@@ -7,11 +7,12 @@ import TodoItem from "./todo-item";
 import EditTodo from "./change-todo";
 
 const Todo = () => {
-  const [todos, setTodos] = useState([]); // set empty array to hold todo state
-
+  //  set empty array to hold todo state
+  const [todos, setTodos] = useState([]); 
+console.log(todos)
   // get todos from local storage on render
   useEffect(() => {
-    const savedTodos = JSON.parse(localStorage.getItem("todos"));
+    const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
     setTodos(savedTodos);
   }, []);
 
@@ -24,7 +25,9 @@ const Todo = () => {
   //sort functionality to show completed todos
   const filterTodoByCompletion = (completed) => {
     const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
-    const conpletedTodos = savedTodos?.filter((todo) => todo.completed === true);
+    const conpletedTodos = savedTodos?.filter(
+      (todo) => todo.completed === true
+    );
     setTodos(conpletedTodos);
   };
 
@@ -83,7 +86,7 @@ const Todo = () => {
         showAll={showAll}
       />
       {/* show message if todo is empty */}
-      {todos?.length === 0 && (
+      {todos.length === 0 && (
         <div className="flex gap-2">
           <CgDanger color={"#504e4e"} size={20} />
           <span className="text-[#504e4e] xl:text-base text-sm">

@@ -84,22 +84,37 @@ const TodoForm = ({
             className="absolute right-[10%] border border-[#8758ff] mx-2 rounded-[10px] outline-none px-4 py-2 md:text-base text-sm md:mr-0 mr-10"
             onChange={handleFilter}
           >
-            <option value="completed" name="sorted" className="md:text-base text-sm">
+            <option
+              value="completed"
+              name="sorted"
+              className="md:text-base text-sm"
+            >
               by completed tasks
             </option>
-            <option value="active" name="sorted" className="md:text-base text-sm">
+            <option
+              value="active"
+              name="sorted"
+              className="md:text-base text-sm"
+            >
               by active tasks
             </option>
-            <option value="all" name="sorted" className="md:text-base text-sm" selected>
+            <option
+              value="all"
+              name="sorted"
+              className="md:text-base text-sm"
+              selected
+            >
               all tasks
             </option>
           </select>
         )}
         {/* displays sort if task length is more than 1  */}
-       {task  && <span className="flex gap-2 items-center " onClick={handleSort}>
-          <MdOutlineSort size={20} />
-          <span className="md:text-[18px] text-sm">Sort</span>
-        </span>}
+        {task?.length > 1 && (
+          <span className="flex gap-2 items-center " onClick={handleSort}>
+            <MdOutlineSort size={20} />
+            <span className="md:text-[18px] text-sm">Sort</span>
+          </span>
+        )}
       </div>
       <hr className="w-full bg-black text-black" />
       <style>{selectArrow}</style>
