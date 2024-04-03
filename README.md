@@ -2,7 +2,7 @@
 This is a web app built with React js and Tailwind CSS. The purpose of this website is to provide a user-friendly platform to add daily tasks, and track them accordingly.
 
 ## Features
-* **Task Filter**: The web application is equipped with a search bar. Users can easily search for properties based on their preferences, such as category, property type, price or number of bedrooms.
+* **Task Filter**: The web application is equipped with a sort feature. Users can easily sort for tasks based on their preferences, such as completed tasks, active tasks, or list all tasks.
 * **Edit Task**: The project is equipped with an edit functionality, that enables the easy editing of an already set task.
 * **Delete Task**: Completed tasks can be easily deleted.
 * **Task Listing**:  The application displays a list of tasks based on the user's input.
@@ -14,8 +14,8 @@ This is a web app built with React js and Tailwind CSS. The purpose of this webs
 * **Tailwind CSS**: Tailwind CSS is utilized for styling the application, providing a flexible and utility-first approach to building custom user interfaces.
 
 ## Getting Started / Installation
-> To get started with Obsglobal web application, follow these steps:
-1. Clone the repository: git clone <https://github.com/todo-sa.git>
+> To get started with TodoSa Project, follow these steps:
+1. Clone the repository: git clone <https://github.com/encode412/todo-sa.git>
 2. Navigate to the project directory: cd todo-sa
 3. Install the dependencies: npm install
 4. Start the development server: npm run dev
