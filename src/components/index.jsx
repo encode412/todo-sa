@@ -47,7 +47,7 @@ const Todo = () => {
 
   // functionality to set todo as complete or not
   const toggleComplete = (id) => {
-    const newTodos = todos.map((todo) =>
+    const newTodos = todos?.map((todo) =>
       todo.id === id ? { ...todo, completed: !todo.completed } : todo
     );
     setTodos(newTodos);
@@ -56,7 +56,7 @@ const Todo = () => {
 
   // functionality to delete todo
   const deleteTodo = (id) => {
-    const newTodos = todos.filter((todo) => todo.id !== id);
+    const newTodos = todos?.filter((todo) => todo.id !== id);
     setTodos(newTodos);
     localStorage.setItem("todos", JSON.stringify(newTodos));
   };
@@ -71,7 +71,7 @@ const Todo = () => {
 
   // functionality to edit a tod
   const editTask = (task, id) => {
-    const newTodos = todos.map((todo) =>
+    const newTodos = todos?.map((todo) =>
       todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
     );
     setTodos(newTodos);
