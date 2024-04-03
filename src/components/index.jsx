@@ -8,8 +8,8 @@ import EditTodo from "./change-todo";
 
 const Todo = () => {
   //  set empty array to hold todo state
-  const [todos, setTodos] = useState([]); 
-console.log(todos)
+  const [todos, setTodos] = useState([]);
+   
   // get todos from local storage on render
   useEffect(() => {
     const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
