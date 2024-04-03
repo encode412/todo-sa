@@ -96,7 +96,7 @@ const TodoForm = ({
           </select>
         )}
         {/* displays sort if task length is more than 1  */}
-       {task.length > 1  && <span className="flex gap-2 items-center " onClick={handleSort}>
+       {task?.length > 1  && <span className="flex gap-2 items-center " onClick={handleSort}>
           <MdOutlineSort size={20} />
           <span className="md:text-[18px] text-sm">Sort</span>
         </span>}
