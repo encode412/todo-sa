@@ -11,7 +11,15 @@ This is a web app built with React js and Tailwind CSS. The purpose of this webs
 
 ## Technologies Used
 * **React.js**: The application is built using the React.js, allowing for efficient and modular development of user interfaces.
-* **Tailwind CSS**: Tailwind CSS is utilized for styling the application, providing a flexible and utility-first approach to building custom user interfaces.
+* **Tailwind CSS**: Tailwind CSS is utilized for styling the application, i decided to use tailwind because it provides a flexible and utility-first approach to building custom user interfaces.
+
+## Project Structure
+1. *node_modules*: This contains all installed dependencies.
+2. *public*: This contains any files that will be served directly to the browser.
+3. *src*: This is where all the logic for the application resides.
+4. *src>assets*: This contains images and may also contain other top level css files.
+5. *src>components*: This contains all the React components that make up the application.
+6. *App.jsx*: This is the main component of the React application. It contains the structure and logic for the app’s user interface.
 
 ## Getting Started / Installation
 > To get started with TodoSa Project, follow these steps:
