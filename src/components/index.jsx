@@ -91,7 +91,7 @@ const Todo = () => {
         showAll={showAll}
       />
       {/* show message if todo is empty */}
-      {todos.length === 0 && (
+      {todos?.length === 0 && (
         <div className="flex gap-2">
           <CgDanger color={"#504e4e"} size={20} />
           <span className="text-[#504e4e] xl:text-base text-sm">
@@ -100,7 +100,7 @@ const Todo = () => {
         </div>
       )}
       {/* display todo item or todo input if editing is true or false */}
-      {todos.map((todo) =>
+      {todos?.map((todo) =>
         todo.isEditing ? (
           <EditTodo editTodo={editTask} task={todo} />
         ) : (
@@ -113,7 +113,7 @@ const Todo = () => {
           />
         )
       )}
-      {todos.length !== 0 && (
+      {todos?.length !== 0 && (
         <div className="flex items-center justify-center gap-4">
           <FaLightbulb color="#969494" size={20} />
           <span className="text-[#969494] xl:text-base text-sm">
