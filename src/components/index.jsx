@@ -116,7 +116,7 @@ const Todo = () => {
       {todos?.length !== 0 && (
         <div className="flex items-center justify-center gap-4">
           <FaLightbulb color="#969494" size={20} />
-          <span className="text-[#969494] xl:text-base text-sm">
+          <span className="text-[#969494] xl:text-base text-sm text-center">
             click on the checkbox to mark a task as completed
           </span>
         </div>
